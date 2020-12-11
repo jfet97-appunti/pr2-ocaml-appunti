@@ -104,7 +104,7 @@ let rec eval ex ev =
   rfp: il parametro formale di c
   rb: il corpo di c
   rcev: l'environment di c (quello dove la closure era stata creata)
-  raev: environment da usare quando si valuta il body di f aka rn, costituito da cev U al binding fp -> ap
+  raev: environment da usare quando si valuta il body di f aka rn, costituito da rcev U al binding fp -> ap U al binding rn -> c
   *)
   | Apply(ef, ape) ->
       let c = eval ef ev in
